@@ -1,0 +1,166 @@
+.nav {
+    background-color: #FDFAF5;
+    overflow:hidden;
+}
+.nav a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 10px;
+}
+.nav a:hover {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: underline;
+    font-size: 17px;
+}
+.nav a.active {
+    font-weight: bold;
+    color: #C36E49;
+}
+.nav img {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.footer a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 10px;
+}
+.footer a:hover {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: underline;
+    font-size: 17px;
+}
+p {
+    padding-left: 20px;
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    font-family: 'epilogue';
+}
+h3 {
+    padding-left: 20px;
+    font-family: 'epilogue';
+    font-size: 50px;
+    font-weight: bold;
+}
+h2 {
+    padding-left: 20px;
+    font-family: 'socheerful';
+    font-size:30px;
+}
+h1 {
+    padding-left: 20px;
+    font-family: 'socheerful';
+    font-size: 150px;
+}
+.nav, .footer {
+    font-family: 'epilogue';
+}
+.Projects {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "Project1-Image" "Project1"
+    "Project2-Image" "Project2"
+    "Project3-Image" "Project3";
+}
+.workGrid {
+    display: grid; 
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+.workGrid > div {
+    padding: 20px;
+}
+.project1-image {
+    grid-template-areas: Project1-Image;
+}
+.project1 {
+    grid-template-areas: Project1;
+}
+.project2-image {
+    grid-template-areas: Project2-Image;
+}
+.project2 {
+    grid-template-areas: Project2;
+}
+.project3-image {
+    grid-template-areas: Project3-Image;
+}
+.project3 {
+    grid-template-areas: Project3;
+}
+.workGrid img {
+    grid-column: 1;
+    grid-row: 1;
+    filter:saturate(30%);
+}
+.workGrid img:hover {
+    filter:saturate(100%);
+}
+button {
+    width: 280px;
+    height: 55px;
+    background-color: #EFCDC8;
+    padding: 20px;
+    border: none;
+    text-align: center;
+    border-radius: 20px;
+    font-family: 'epilogue';
+    font-size: 18px;
+}
+button:hover {
+    background-color: #C36E49;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .Projects {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "Project1-Image"
+        "Project1"
+        "Project2-Image"
+        "Project2"
+        "Project3-Image"
+        "Project3";
+    }
+    .workGrid {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+      }
+      .workGrid > div {
+        padding: 20px;
+      }
+      .project1-image,
+      .project1,
+      .project2-image,
+      .project2,
+      .project3-image,
+      .project3 {
+        grid-template-areas: none;
+      }
+      .workGrid img {
+        width: 500px;
+      }
+    }
